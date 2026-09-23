@@ -1,1 +1,1 @@
-FROM_FILE:/tmp/composio-types-only.json
+Œ‚ÄþÙ©ýÊ&¦‹"¢·¬¶ŠÞ·*^²;(
