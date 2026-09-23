@@ -41,7 +41,7 @@ export interface Translations {
   // Status segmented control label
   "status.label": string;
 
-  // Page scope segmented control — keep panel results focused on the current
+  // Page scope segmented control \u2014 keep panel results focused on the current
   // page or expand to the same template / all pages
   "scope.label": string;
   "scope.thisPage": string;
@@ -85,7 +85,7 @@ export interface Translations {
   // FAB badge
   "fab.badge": string;
 
-  // Accessibility — screen reader announcements
+  // Accessibility \u2014 screen reader announcements
   "feedback.sent.confirmation": string;
   "feedback.error.message": string;
   "feedback.deleted.confirmation": string;
@@ -107,6 +107,7 @@ export interface Translations {
   "sort.openFirst": string;
   "sort.label": string;
   "group.byPage": string;
+  "group.byMe": string;
   "group.feedbacks": string;
 
   // Stats bar
