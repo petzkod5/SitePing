@@ -108,6 +108,7 @@ export const ru: Translations = {
   "sort.openFirst": "Сначала открытые",
   "sort.label": "Сортировка",
   "group.byPage": "По странице",
+  "group.byMe": "Мои",
   "group.feedbacks": "Отзывов: {count}",
 
   // Stats bar

@@ -109,6 +109,7 @@ export const pt: Translations = {
   "sort.openFirst": "Abertos primeiro",
   "sort.label": "Ordenar",
   "group.byPage": "Por página",
+  "group.byMe": "Por mim",
   "group.feedbacks": "{count} feedbacks",
 
   // Stats bar
