@@ -1,1 +1,1 @@
-FROM_FILE:/tmp/restore-0.json:content
+FROM_FILE:/tmp/multi-types.json:tools.0.arguments.content
