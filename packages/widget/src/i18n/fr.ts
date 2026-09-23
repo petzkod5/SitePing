@@ -114,8 +114,8 @@ export const fr: Translations = {
   // Stats bar
   "stats.open": "Ouverts",
   "stats.resolved": "Résolus",
-  "stats.bugs": "Bugs",
   "stats.progress": "{percent}% résolus",
+  "stats.bugs": "Bugs",
 
   // Detail view
   "detail.back": "Retour",
@@ -150,7 +150,7 @@ export const fr: Translations = {
   // Keyboard shortcuts overlay
   "shortcuts.title": "Raccourcis clavier",
   "shortcuts.navigate": "Naviguer les feedbacks",
-  "shortcuts.resolve": "Résoudre / Rouvrh�",
+  "shortcuts.resolve": "Résoudre / Rouvrir",
   "shortcuts.delete": "Supprimer",
   "shortcuts.search": "Rechercher",
   "shortcuts.select": "Sélectionner",
