@@ -1,1 +1,1 @@
-FROM_FILE:/tmp/github-push-fix-batch1.json:1
+FROM_FILE:/tmp/composio-launcher-only.json
