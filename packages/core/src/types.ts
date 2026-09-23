@@ -1,1 +1,1 @@
-PLACEHOLDER_WILL_REPLACE
+FROM_FILE:/tmp/restore-0.json:content
