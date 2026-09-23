@@ -9,16 +9,16 @@ export const fr: Translations = {
   "panel.close": "Fermer le panneau",
   "panel.deleteAll": "Tout supprimer",
   "panel.deleteAllConfirmTitle": "Tout supprimer",
-  "panel.deleteAllConfirmMessage": "Supprimer tous les feedbacks de ce projet ? Cette action est irréversible.",
+  "panel.deleteAllConfirmMessage": "Supprimer tous les feedbacks de ce projet ? Cette action est irr\u00e9versible.",
   "panel.search": "Rechercher...",
   "panel.searchAria": "Rechercher dans les feedbacks",
   "panel.filterAll": "Tous",
   "panel.loadError": "Erreur de chargement",
-  "panel.retry": "Réessayer",
+  "panel.retry": "R\u00e9essayer",
   "panel.empty": "Aucun feedback pour le moment",
   "panel.showMore": "Voir plus",
   "panel.showLess": "Voir moins",
-  "panel.resolve": "Résoudre",
+  "panel.resolve": "R\u00e9soudre",
   "panel.reopen": "Rouvrir",
   "panel.delete": "Supprimer",
   "panel.cancel": "Annuler",
@@ -49,23 +49,23 @@ export const fr: Translations = {
   "scope.all": "Toutes les pages",
 
   // FAB menu
-  "fab.aria": "Siteping — Menu feedback",
+  "fab.aria": "Siteping \u2014 Menu feedback",
   "fab.messages": "Afficher la barre latérale",
   "fab.annotate": "Créer une nouvelle annotation",
   "fab.annotations": "Afficher ou masquer les marqueurs",
 
   // Annotator
   "annotator.instruction":
-    "Tracez un rectangle sur la zone à commenter — ou appuyez sur Entrée pour commenter le dernier élément actif",
-  "annotator.instantInstruction": "Commenter l'endroit cliqué",
+    "Tracez un rectangle sur la zone \u00e0 commenter \u2014 ou appuyez sur Entr\u00e9e pour commenter le dernier \u00e9l\u00e9ment actif",
+  "annotator.instantInstruction": "Commenter l'endroit cliqu\u00e9",
   "annotator.cancel": "Annuler",
 
   // Popup
   "popup.ariaLabel": "Formulaire de feedback",
-  "popup.placeholder": "Décrivez votre retour...",
+  "popup.placeholder": "D\u00e9crivez votre retour...",
   "popup.textareaAria": "Message de feedback",
-  "popup.submitHintMac": "⌘+Entrée pour envoyer",
-  "popup.submitHintOther": "Ctrl+Entrée pour envoyer",
+  "popup.submitHintMac": "\u2318+Entr\u00e9e pour envoyer",
+  "popup.submitHintOther": "Ctrl+Entr\u00e9e pour envoyer",
   "popup.cancel": "Annuler",
   "popup.submit": "Envoyer",
 
@@ -150,7 +150,7 @@ export const fr: Translations = {
   // Keyboard shortcuts overlay
   "shortcuts.title": "Raccourcis clavier",
   "shortcuts.navigate": "Naviguer les feedbacks",
-  "shortcuts.resolve": "Résoudre / Rouvrir",
+  "shortcuts.resolve": "Résoudre / Rouvrh�",
   "shortcuts.delete": "Supprimer",
   "shortcuts.search": "Rechercher",
   "shortcuts.select": "Sélectionner",

@@ -56,7 +56,7 @@ export const en: Translations = {
 
   // Annotator
   "annotator.instruction":
-    "Draw a rectangle on the area to comment \u2014 or press Enter to comment on the last focused element",
+    "Draw a rectangle on the area to comment — or press Enter to comment on the last focused element",
   "annotator.instantInstruction": "Comment on the clicked spot",
   "annotator.cancel": "Cancel",
 
@@ -80,13 +80,13 @@ export const en: Translations = {
 
   // Markers
   "marker.approximate": "Approximate position (confidence: {confidence}%)",
-  "marker.aria": "Feedback #{number}: {type} \u2014 {message}",
+  "marker.aria": "Feedback #{number}: {type} — {message}",
   "marker.count": "{count} feedback markers displayed",
 
   // FAB badge
   "fab.badge": "{count} unresolved feedbacks",
 
-  // Accessibility \u2014 screen reader announcements
+  // Accessibility — screen reader announcements
   "feedback.sent.confirmation": "Feedback sent successfully",
   "feedback.error.message": "Failed to send feedback",
   "feedback.deleted.confirmation": "Feedback deleted",
