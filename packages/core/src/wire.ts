@@ -26,6 +26,8 @@ export function feedbackQueryToSearchParams(query: FeedbackQuery): URLSearchPara
   if (query.search) params.set("search", query.search);
   if (query.url) params.set("url", query.url);
   if (query.urlPattern) params.set("urlPattern", query.urlPattern);
+  if (query.authorName) params.set("authorName", query.authorName);
+  if (query.authorEmail) params.set("authorEmail", query.authorEmail);
   return params;
 }
 

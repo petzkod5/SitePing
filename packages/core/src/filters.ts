@@ -10,7 +10,8 @@
  *   3. status / statuses  (`statuses` bucket wins when both are set)
  *   4. url
  *   5. urlPattern
- *   6. search       (lowercase substring match on `message`)
+ *   6. authorName + authorEmail  (both required; normalized match)
+ *   7. search       (lowercase substring match on `message`)
  *
  * Pagination goes through `clampPagination`: `limit` capped at 100, `page`
  * 1-based, both clamped up to 1 rather than indexing backwards from the end
@@ -18,6 +19,7 @@
  * paginates identically.
  */
 
+import { normalizeAuthorEmail, normalizeAuthorName } from "./author-match.js";
 import type { FeedbackQuery, FeedbackRecord } from "./types.js";
 
 /** Default page size when the caller omits `query.limit`. */
@@ -83,6 +85,13 @@ export function applyFeedbackFilters(items: readonly FeedbackRecord[], query: Fe
   }
   if (query.url) results = results.filter((f) => f.url === query.url);
   if (query.urlPattern) results = results.filter((f) => f.urlPattern === query.urlPattern);
+  if (query.authorName && query.authorEmail) {
+    const name = normalizeAuthorName(query.authorName);
+    const email = normalizeAuthorEmail(query.authorEmail);
+    results = results.filter(
+      (f) => normalizeAuthorName(f.authorName) === name && normalizeAuthorEmail(f.authorEmail) === email,
+    );
+  }
   if (query.search) {
     const s = query.search.toLowerCase();
     results = results.filter((f) => f.message.toLowerCase().includes(s));
