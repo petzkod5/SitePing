@@ -140,7 +140,7 @@ describe("PanelSortControls", () => {
     expect(controls.sortMode).toBe("oldest");
     expect(sortButton.textContent).toContain("Oldest first");
     expect(sortButton.getAttribute("aria-expanded")).toBe("false");
-    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange).toHaveBeenCalledWith("sort");
   });
 
   it("toggles group-by-page state and renders French labels", () => {
@@ -156,7 +156,35 @@ describe("PanelSortControls", () => {
     expect(controls.groupByPage).toBe(true);
     expect(groupToggle.getAttribute("aria-pressed")).toBe("true");
     expect(groupToggle.classList.contains("sp-group-toggle--active")).toBe(true);
-    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange).toHaveBeenCalledWith("groupByPage");
+  });
+
+  it("does not render the By me toggle without host identity", () => {
+    const controls = new PanelSortControls(buildThemeColors(), vi.fn(), createT("en"));
+    document.body.appendChild(controls.element);
+
+    expect(controls.element.querySelector(".sp-group-toggle--by-me")).toBeNull();
+    expect(controls.filterByMe).toBe(false);
+  });
+
+  it("renders and toggles the By me control when host identity is provided", () => {
+    const onChange = vi.fn();
+    const controls = new PanelSortControls(buildThemeColors(), onChange, createT("en"), {
+      name: "Host User",
+      email: "host@example.com",
+    });
+    document.body.appendChild(controls.element);
+
+    const byMeToggle = controls.element.querySelector<HTMLButtonElement>(".sp-group-toggle--by-me")!;
+    expect(byMeToggle).not.toBeNull();
+    expect(byMeToggle.textContent).toContain("By me");
+    expect(byMeToggle.querySelector("svg")).not.toBeNull();
+
+    byMeToggle.click();
+
+    expect(controls.filterByMe).toBe(true);
+    expect(byMeToggle.getAttribute("aria-pressed")).toBe("true");
+    expect(onChange).toHaveBeenCalledWith("filterByMe");
   });
 
   it("destroy without an open menu is a no-op (closeMenu handles null menuEl)", () => {
@@ -204,7 +232,7 @@ describe("PanelSortControls", () => {
     controls.element.querySelectorAll<HTMLButtonElement>('[role="option"]')[2]!.click();
 
     expect(controls.sortMode).toBe("by-type");
-    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange).toHaveBeenCalledWith("sort");
   });
 
   it("clicking the sort button twice toggles the menu open then closed", () => {
